@@ -1,0 +1,13 @@
+[caps]
+# 真机
+platformName = "Android"
+deviceName = "6f62bef2"
+#platformVersion = "7.1.2"
+appPackage = "com.sitech.ac"
+appActivity = "com.cmcc.sjyyt.activitys.WelcomeActivity"
+udid = "6f62bef2"
+noReset = true
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false
