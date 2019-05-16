@@ -7,9 +7,9 @@ caps   = { caps:   { platformName: 'Android',
                      appActivity: 'com.cmcc.sjyyt.activitys.WelcomeActivity',#app的Activity名
                      appPackage: 'com.sitech.ac',#app的包名
                      deviceName: '6f62bef2',#设备名
-                     unicodeKeyboard: 'True',
+                     unicodeKeyboard: true,
                      udid:'6f62bef2',#设备id
-                     noReset:'True'
+                     noReset:true
 },
            appium_lib: { sauce_username: nil, sauce_access_key: nil } }
 
