@@ -18,4 +18,18 @@ World do
 end
 
 Before { $driver.start_driver }
-After { $driver.driver_quit }
+
+After do |scenario|
+    if scenario.failed?
+    	puts "报错截图："
+    	addScreenshot("#{Time.now.strftime("%Y%m%d%H%M%S")}_error")
+    end
+    $driver.driver_quit
+end
+
+# 添加截图
+def addScreenshot(name)
+    driver.save_screenshot("./Screenshot/" + name + ".png")
+	sleep 1 #防止脚本立即退出时截图为空
+    puts '<img src="' + 'Screenshot/'+name+'.png"' + ' style="width: 80px; height: 100px">'
+end
